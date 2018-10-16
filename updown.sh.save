@@ -1,0 +1,16 @@
+#! /bin/bash
+
+random=$((RANDOM%101))
+echo "select 0 ~100"
+while : ; do
+	read num
+	if [$num -lt 0 ] || [$num -gt 100] ; then
+		echo "try again"
+		read num
+	fi
+	if [$num -eq $num ]  ; then
+		echo "corr"
+		break;
+	elif [ $num -lt $random ] ; then
+		echo "up"
+		
